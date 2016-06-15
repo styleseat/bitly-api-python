@@ -6,16 +6,16 @@ import types
 import warnings
 
 try:
-    from urllib.request import build_opener, HTTPRedirectHandler
-    from urllib.parse import urlencode
-    from urllib.error import URLError, HTTPError
+    from eventlet.green.urllib.request import build_opener, HTTPRedirectHandler
+    from eventlet.green.urllib.parse import urlencode
+    from eventlet.green.urllib.error import URLError, HTTPError
     string_types = str,
     integer_types = int,
     numeric_types = (int, float)
     text_type = str
     binary_type = bytes
 except ImportError as e:
-    from urllib2 import build_opener, HTTPRedirectHandler, URLError, HTTPError
+    from evenlet.green.urllib2 import build_opener, HTTPRedirectHandler, URLError, HTTPError
     from urllib import urlencode
     string_types = basestring,
     integer_types = (int, long)

@@ -25,4 +25,5 @@ setup(name='bitly_api',
       packages=['bitly_api'],
       include_package_data=True,
       zip_safe=True,
+      requires=['eventlet'],
       )
